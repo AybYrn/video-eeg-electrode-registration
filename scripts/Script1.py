@@ -45,7 +45,10 @@ else:
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_DIR = os.path.dirname(SCRIPT_DIR)
 
-VIDEO_DIR = os.path.join(BASE_DIR, "data", "Video_Recordings")
+VIDEO_DIR = os.path.join(BASE_DIR, "data", "raw", "videos")
+if not os.path.exists(VIDEO_DIR):
+    # fallback for older layouts where videos were directly under data/
+    VIDEO_DIR = os.path.join(BASE_DIR, "data")
 FRAME_DIR = os.path.join(BASE_DIR, "frames")
 RESULTS_BASE_DIR = os.path.join(BASE_DIR, "results")
 CHECKPOINT_DIR = os.path.join(BASE_DIR, "checkpoints")

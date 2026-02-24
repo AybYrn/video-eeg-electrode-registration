@@ -96,7 +96,7 @@ print(f"Device: {DEVICE.upper()}")
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_DIR = os.path.dirname(SCRIPT_DIR)
 
-VIDEO_DIR = os.path.join(BASE_DIR, "data", "Video_Recordings")
+VIDEO_DIR = os.path.join(BASE_DIR, "data", "raw", "videos")
 FRAME_DIR = os.path.join(BASE_DIR, "frames")
 RESULTS_BASE_DIR = os.path.join(BASE_DIR, "results")  # Base results directory
 CHECKPOINT_DIR = os.path.join(BASE_DIR, "checkpoints")
