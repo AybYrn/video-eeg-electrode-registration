@@ -54,7 +54,7 @@ RESULTS_BASE_DIR = os.path.join(BASE_DIR, "results")
 CHECKPOINT_DIR = os.path.join(BASE_DIR, "checkpoints")
 VGGT_REPO_PATH = os.path.join(SCRIPT_DIR, "vggt")
 
-YOLO_WEIGHTS = os.path.join(BASE_DIR, "runs", "detect", "train4", "weights", "best.pt")
+YOLO_WEIGHTS = os.path.join(BASE_DIR, "models", "yolo", "best.pt")
 
 
 def setup_video_output_dir(video_path):
@@ -527,12 +527,12 @@ def load_yolo():
     print(f"\nLoading YOLO model...")
     yolo = None
     if os.path.exists(YOLO_WEIGHTS):
+        print(f"[OK] Using YOLO weights: {YOLO_WEIGHTS}")
         yolo = YOLO(YOLO_WEIGHTS)
-        print("  YOLO loaded successfully")
+        print("[OK] YOLO loaded successfully")
     else:
-        print("  WARNING: YOLO not found, will use manual detection only")
+        print("[INFO] YOLO weights not found. Skipping YOLO detection.")
     return yolo
-
 
 # MULTI-VIEW ANNOTATOR
 
