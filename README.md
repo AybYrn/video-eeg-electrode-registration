@@ -120,7 +120,7 @@ flowchart TD
    - Keep camera 50 cm from head
 
 3. **File organization:**
-   - Place videos in `data/Video_Recordings/`
+   - Place videos in `data/raw/videos/`
    - Use descriptive names (e.g., `Subject1_Baseline.mp4`)
 
 ---
@@ -130,7 +130,7 @@ flowchart TD
 **Command:** `python scripts/script1.py`
 
 #### 1.1 Video Selection
-- Lists available videos from `data/Video_Recordings/`
+- Lists available videos from `data/raw/videos/`
 - Creates video-specific results folder (e.g., `results/IMG_3841/`)
 - All outputs for this video stored separately
 
